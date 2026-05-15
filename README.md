@@ -38,11 +38,52 @@ The client will start on `http://localhost:3000`.
 
 ---
 
+## 🐳 Running with Docker
+
+Since the project has been Dockerized, you can manually build and run the containers using the standard Docker commands.
+
+### 1. Build the Images
+```bash
+# Build Database Image
+cd database
+docker build -t contact-app-database .
+cd ..
+
+# Build Backend Image
+cd backend
+docker build -t contact-app-backend .
+cd ..
+
+# Build Frontend Image
+cd frontend
+docker build -t contact-app-frontend .
+cd ..
+```
+
+### 2. Run the Containers
+*Note: We will automate this using `docker-compose` later!*
+```bash
+# Create a custom bridge network so containers can communicate
+docker network create devops-network
+
+# 1. Start MongoDB
+docker run -d --name mongo --network devops-network -p 27017:27017 contact-app-database
+
+# 2. Start Backend
+docker run -d --name backend --network devops-network -p 5000:5000 -e MONGODB_URI=mongodb://mongo:27017/devops_project contact-app-backend
+
+# 3. Start Frontend
+docker run -d --name frontend --network devops-network -p 80:80 contact-app-frontend
+```
+You can now access the app at `http://localhost`.
+
+---
+
 ## 🛠️ DevOps Roadmap
 
 *(This section will be updated as DevOps components are integrated into the repository)*
 
-- [ ] **Dockerization**: Containerize frontend and backend using Dockerfiles.
+- [x] **Dockerization**: Containerize frontend, backend, and database using Dockerfiles.
 - [ ] **Docker Compose**: Orchestrate the 3-tier stack locally using `docker-compose.yml`.
 - [ ] **Continuous Integration (Jenkins)**: Automate code testing and Docker image builds.
 - [ ] **Kubernetes (K8s)**: Deploy to a cluster using Deployments, Services, ConfigMaps, and Secrets.
