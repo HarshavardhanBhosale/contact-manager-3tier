@@ -1,0 +1,50 @@
+pipeline{
+    agent {label 'ubuntu'}
+
+stages{
+    stage("code clone"){
+        steps{
+            git branch: 'main', url: 'https://github.com/HarshavardhanBhosale/contact-manager-3tier.git'
+        }
+    }
+    stage("building docker images"){
+        steps{
+            sh ''' cd frontend 
+            docker build --tag harshavardhan88/frontcontact:v1 . 
+            echo "^ builded frontend docker image"
+            cd ..'''
+            sh ''' cd backend
+            docker build --tag harshavardhan88/backendcontact:v1 . 
+            echo '^ builded backend docker image'
+             cd .. '''
+            sh ''' cd database
+            docker build --tag harshavardhan88/databasecontact:v1 . 
+             echo '^ builded backend docker image'
+             cd ..
+            echo 'all docker images builded' '''
+        }
+    }
+    stage("pushing dockerhub"){
+        steps{
+            withCredentails([usernamePassword(credentialId: 'dockerhub-creds' ,  usernameVariable: 'USER' ,  passwordVariable: 'PASS' )]){
+            sh  '''  
+              echo  "$PASS" | docker login -u "$USER" --password-stdin
+              '''
+             sh 'docker push  harshavardhan88/frontcontact:v1 '
+             echo 'pushing forntend succcess'
+             sh 'docker push  harshavardhan88/backendcontact:v1  '
+             echo 'pushing backend succcess'
+             sh 'docker push harshavardhan88/databasecontact:v1 '
+             echo 'pushing database successfully'
+             
+            }
+        }
+    }
+    stage ("running containers"){
+        steps{
+            sh 'docker-compose up -d '
+        }
+    }
+    
+}  
+}
