@@ -2,10 +2,33 @@ name: contact-manager
 services:
   frontend:
     container_name: frontend_contact
-    build: /frontend/.
+    image: harshavardhan88/frontcontact1:latest
     networks: 
          -  "mynet"
     ports:
-         - "5000:80"
+         - "80:80"
+    depends_on: backend    
+
+  backend:
+    container_name: backend_contact
+    image: harshavardhan88/backendcontact:latest 
+    networks:
+         - "mynet"
+    ports: 
+         - "5000:5000"
+    depends_on: database
+  database:
+     container_name: mongodb_contact
+     image: harshavardhan88/databasecontact:latest
+     networks:
+         - "mynet"
+     ports:
+         - "27017:27017"     
+     volumes:
+         - "myvol:/data/db"     
+
 networks:
     mynet:
+    
+volumes:
+    myvol:
