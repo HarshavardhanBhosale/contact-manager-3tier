@@ -2,7 +2,7 @@ name: contact-manager
 services:
   frontend:
     container_name: frontend_contact
-    image: harshavardhan88/frontcontact1:latest
+    image: harshavardhan88/frontcontact:v1
     networks: 
          -  "mynet"
     ports:
@@ -11,7 +11,7 @@ services:
 
   backend:
     container_name: backend_contact
-    image: harshavardhan88/backendcontact:latest 
+    image: harshavardhan88/backendcontact:v1
     networks:
          - "mynet"
     ports: 
@@ -19,7 +19,7 @@ services:
     depends_on: database
   database:
      container_name: mongodb_contact
-     image: harshavardhan88/databasecontact:latest
+     image: harshavardhan88/databasecontact:v1
      networks:
          - "mynet"
      ports:
@@ -29,6 +29,6 @@ services:
 
 networks:
     mynet:
-    
+
 volumes:
     myvol:
