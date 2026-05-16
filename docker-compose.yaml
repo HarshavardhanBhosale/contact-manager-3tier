@@ -1,0 +1,11 @@
+name: contact-manager
+services:
+  frontend:
+    container_name: frontend_contact
+    build: /frontend/.
+    networks: 
+         -  "mynet"
+    ports:
+         - "5000:80"
+networks:
+    mynet:
