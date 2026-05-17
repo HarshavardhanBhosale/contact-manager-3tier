@@ -1,4 +1,4 @@
-# Contact Manager - 3-Tier Application Sandbox
+<img width="1886" height="1028" alt="Screenshot 2026-05-17 131100" src="https://github.com/user-attachments/assets/2f955939-b181-4235-803a-768da0a4bf69" /><img width="1918" height="1029" alt="Screenshot 2026-05-17 131011" src="https://github.com/user-attachments/assets/4b2e500e-a685-482f-a3d8-e05d03ef524a" /># Contact Manager - 3-Tier Application Sandbox
 
 A classic 3-tier contact management application featuring a React front-end, Node.js/Express back-end, and MongoDB. This project serves as a practical sandbox for learning and implementing modern DevOps practices, including containerization, CI/CD, and cloud orchestration.
 
@@ -137,8 +137,8 @@ The project can be deployed to an Ubuntu EC2 instance using the following steps:
    ```
 3. **Clone the repository** and run the compose file:
    ```bash
-   git clone <repo-url>
-   cd "devops project"
+   git clone <https://github.com/HarshavardhanBhosale/contact-manager-3tier.git>
+   cd "contact-manager-3tier"
    docker-compose up -d
    ```
 4. The application will be reachable at `http://<ec2-public-ip>`.
@@ -147,17 +147,17 @@ The project can be deployed to an Ubuntu EC2 instance using the following steps:
 
 Below is a screenshot of the Jenkins pipeline view for this project.
 
-![Jenkins Pipeline UI](assets/jenkins_pipeline.png)
+![Jenkins Pipeline UI](<img width="1918" height="1029" alt="Screenshot 2026-05-17 131011" src="https://github.com/user-attachments/assets/c526b43c-e190-4671-96a8-0a987ccfd881" />)
 
 ## 📸 Application UI Screenshots
 
 1. **Frontend Home Page**  
-   ![App UI 1](assets/app_ui_1.png)
+   ![App UI 1](<img width="1886" height="1028" alt="Screenshot 2026-05-17 131100" src="https://github.com/user-attachments/assets/da6435a6-2bc2-45d2-a175-a84b7444dbc5" />)
 
 2. **Backend Dashboard**  
-   ![App UI 2](assets/app_ui_2.png)
+   ![App UI 2](<img width="1919" height="1022" alt="Screenshot 2026-05-17 131115" src="https://github.com/user-attachments/assets/b824e8da-2a0b-4829-b07a-24d578ede370" />)         
 
 3. **Database Admin (Mongo Express)**  
-   ![App UI 3](assets/app_ui_3.png)
+   ![App UI 3](<img width="1919" height="1028" alt="Screenshot 2026-05-17 131127" src="https://github.com/user-attachments/assets/c2ba3241-af97-4a57-9746-7018a1ab7f50" />)
 
-*Place the above image files in the `assets/` directory of the repository.*
+
