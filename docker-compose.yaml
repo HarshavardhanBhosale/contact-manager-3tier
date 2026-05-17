@@ -20,7 +20,7 @@ services:
     depends_on: 
               - "database"
   database:
-     container_name: mongodb_contact
+     container_name: devops_project
      image: harshavardhan88/databasecontact:v1
      networks:
          - "mynet"
