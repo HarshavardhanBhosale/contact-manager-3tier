@@ -157,7 +157,7 @@ Below is a screenshot of the Jenkins pipeline view for this project.
 2. **Backend Dashboard**  
    <img width="1919" height="1022" alt="Screenshot 2026-05-17 131115" src="https://github.com/user-attachments/assets/b824e8da-2a0b-4829-b07a-24d578ede370" />         
 
-3. **Database Admin (Mongo Express)*
+3. **About Section**
     <img width="1919" height="1028" alt="Screenshot 2026-05-17 131127" src="https://github.com/user-attachments/assets/c2ba3241-af97-4a57-9746-7018a1ab7f50" />
 
 
