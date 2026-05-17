@@ -19,7 +19,7 @@ services:
          - "5000:5000"
     depends_on: 
               - "mongo"
-   mongo:
+  mongo:
      container_name: mongo
      image: harshavardhan88/databasecontact:v1
      networks:
