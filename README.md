@@ -147,17 +147,17 @@ The project can be deployed to an Ubuntu EC2 instance using the following steps:
 
 Below is a screenshot of the Jenkins pipeline view for this project.
 
-![Jenkins Pipeline UI](<img width="1918" height="1029" alt="Screenshot 2026-05-17 131011" src="https://github.com/user-attachments/assets/c526b43c-e190-4671-96a8-0a987ccfd881" />)
+<img width="1918" height="1029" alt="Screenshot 2026-05-17 131011" src="https://github.com/user-attachments/assets/c526b43c-e190-4671-96a8-0a987ccfd881" />
 
 ## 📸 Application UI Screenshots
 
 1. **Frontend Home Page**  
-   ![App UI 1](<img width="1886" height="1028" alt="Screenshot 2026-05-17 131100" src="https://github.com/user-attachments/assets/da6435a6-2bc2-45d2-a175-a84b7444dbc5" />)
+   <img width="1886" height="1028" alt="Screenshot 2026-05-17 131100" src="https://github.com/user-attachments/assets/da6435a6-2bc2-45d2-a175-a84b7444dbc5" />
 
 2. **Backend Dashboard**  
-   ![App UI 2](<img width="1919" height="1022" alt="Screenshot 2026-05-17 131115" src="https://github.com/user-attachments/assets/b824e8da-2a0b-4829-b07a-24d578ede370" />)         
+   <img width="1919" height="1022" alt="Screenshot 2026-05-17 131115" src="https://github.com/user-attachments/assets/b824e8da-2a0b-4829-b07a-24d578ede370" />         
 
-3. **Database Admin (Mongo Express)**  
-   ![App UI 3](<img width="1919" height="1028" alt="Screenshot 2026-05-17 131127" src="https://github.com/user-attachments/assets/c2ba3241-af97-4a57-9746-7018a1ab7f50" />)
+3. **Database Admin (Mongo Express)*
+    <img width="1919" height="1028" alt="Screenshot 2026-05-17 131127" src="https://github.com/user-attachments/assets/c2ba3241-af97-4a57-9746-7018a1ab7f50" />
 
 
