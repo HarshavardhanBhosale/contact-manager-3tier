@@ -7,7 +7,8 @@ services:
          -  "mynet"
     ports:
          - "80:80"
-    depends_on: backend    
+    depends_on: 
+            - "backend"    
 
   backend:
     container_name: backend_contact
@@ -16,7 +17,8 @@ services:
          - "mynet"
     ports: 
          - "5000:5000"
-    depends_on: database
+    depends_on: 
+              - "database"
   database:
      container_name: mongodb_contact
      image: harshavardhan88/databasecontact:v1
