@@ -42,7 +42,7 @@ stages{
     }
     stage ("running containers"){
         steps{
-            sh 'docker-compose up -d '
+            sh 'docker compose up -d '
         }
     }
     
