@@ -44,7 +44,7 @@ onSubmit=async(dispatch,e)=>
         email
     }
     
-    const res = await axios.post('http://localhost:5000/users',newContact);
+    const res = await axios.post('/users',newContact);
     
     dispatch({type:'ADD_CONTACT',payload:res.data});
     

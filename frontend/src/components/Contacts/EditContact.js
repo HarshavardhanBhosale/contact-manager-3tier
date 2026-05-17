@@ -15,7 +15,7 @@ class EditContact extends Component{
     async componentDidMount()
     {
         const {id} = this.props.match.params;
-        const res = await axios.get(`http://localhost:5000/users/${id}`);
+        const res = await axios.get(`/users/${id}`);
         
         const contact = res.data;
         this.setState({name:contact.name,
@@ -58,7 +58,7 @@ onSubmit=async(dispatch,e)=>
     
     //put request is to update
      const {id} = this.props.match.params;
-        const res = await axios.put(`http://localhost:5000/users/${id}`,updateContact);
+        const res = await axios.put(`/users/${id}`,updateContact);
         
     
     dispatch({type:'UPDATE_CONTACT',payload:res.data});

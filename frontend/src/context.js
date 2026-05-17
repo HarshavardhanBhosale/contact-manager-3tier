@@ -45,12 +45,12 @@ export class Provider extends Component{
 //Lifecycle methods
 async componentDidMount()
 {
-    /*axios.get('http://localhost:5000/users')
+    /*axios.get('/users')
     .then(res=>this.setState({contacts:res.data}));*/
     
     //USing async await
     
-    const res = await axios.get('http://localhost:5000/users');
+    const res = await axios.get('/users');
     this.setState({contacts:res.data});
 }
 render()

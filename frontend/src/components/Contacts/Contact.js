@@ -29,7 +29,7 @@ class Contact extends Component {
      
      //Since we are not gettin anything, we need not save the rquest response in a variable
      try{
-        await axios.delete(`http://localhost:5000/users/${id}`);
+        await axios.delete(`/users/${id}`);
         dispatch({type:'DELETE_CONTACT',payload:id}); 
      }
      catch(e)
