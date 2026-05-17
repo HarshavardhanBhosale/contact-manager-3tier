@@ -18,9 +18,9 @@ services:
     ports: 
          - "5000:5000"
     depends_on: 
-              - "database"
-  database:
-     container_name: devops_project
+              - "mongo"
+   mongo:
+     container_name: mongo
      image: harshavardhan88/databasecontact:v1
      networks:
          - "mynet"
