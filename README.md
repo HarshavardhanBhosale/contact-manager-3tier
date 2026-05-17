@@ -117,7 +117,47 @@ This project includes a `jenkinsfile` defining a declarative CI/CD pipeline. The
 - [x] **Docker Compose**: Orchestrate the 3-tier stack locally using `docker-compose.yaml`.
 - [x] **Continuous Integration (Jenkins)**: Automate code testing and Docker image builds.
 - [ ] **Kubernetes (K8s)**: Deploy to a cluster using Deployments, Services, ConfigMaps, and Secrets.
-- [ ] **Cloud Platform (AWS)**: Host infrastructure in the cloud using managed services (EKS, EC2, etc.).
+- [x] **Cloud Platform (AWS)**: Host infrastructure in the cloud using managed services (EKS, EC2, etc.).
 
 ---
 *Developed and maintained as a DevOps learning project.*
+
+---
+
+## 📦 Deploy to EC2 (Ubuntu)
+
+The project can be deployed to an Ubuntu EC2 instance using the following steps:
+
+1. **Provision an EC2 instance** (Ubuntu 22.04 recommended) and open ports 22 (SSH), 80 (HTTP) and 5000 (backend) in the security group.
+2. **Install Docker and Docker Compose** on the instance:
+   ```bash
+   sudo apt update
+   sudo apt install -y docker.io docker-compose
+   sudo usermod -aG docker $USER
+   ```
+3. **Clone the repository** and run the compose file:
+   ```bash
+   git clone <repo-url>
+   cd "devops project"
+   docker-compose up -d
+   ```
+4. The application will be reachable at `http://<ec2-public-ip>`.
+
+## 🛠️ Jenkins Pipeline UI
+
+Below is a screenshot of the Jenkins pipeline view for this project.
+
+![Jenkins Pipeline UI](assets/jenkins_pipeline.png)
+
+## 📸 Application UI Screenshots
+
+1. **Frontend Home Page**  
+   ![App UI 1](assets/app_ui_1.png)
+
+2. **Backend Dashboard**  
+   ![App UI 2](assets/app_ui_2.png)
+
+3. **Database Admin (Mongo Express)**  
+   ![App UI 3](assets/app_ui_3.png)
+
+*Place the above image files in the `assets/` directory of the repository.*
